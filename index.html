@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cebroid 2k26 - Technical Symposium</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div class="splash-logo">
+            <img src="assets/Imperio CSE logo Golden.png" alt="GoT Symposium Logo">
+        </div>
+    </div>
+
+    <!-- Background -->
+    <div class="dragon-background"></div>
+    <div class="background-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo"><img src="assets/Imperio CSE logo Golden.png" alt="GoT Symposium Logo"></div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home" class="hero">
+            <img src="assets/Title.png" alt="Cebroid 2k26 Title" class="hero-title-img">
+
+            <!-- ══ EVENT COUNTDOWN ══ -->
+            <div class="countdown-wrapper event-countdown-wrapper" id="event-countdown-wrapper">
+                <div class="countdown-label-top">
+                    <span class="countdown-flame">🔥</span>
+                    <span>The Dragon Awakens In</span>
+                    <span class="countdown-flame">🔥</span>
+                </div>
+                <div class="countdown-strip" id="event-countdown">
+                    <div class="countdown-unit" id="evt-days">
+                        <div class="countdown-num" id="evt-d">00</div>
+                        <div class="countdown-lbl">Days</div>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-unit" id="evt-hours">
+                        <div class="countdown-num" id="evt-h">00</div>
+                        <div class="countdown-lbl">Hours</div>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-unit" id="evt-minutes">
+                        <div class="countdown-num" id="evt-m">00</div>
+                        <div class="countdown-lbl">Minutes</div>
+                    </div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-unit" id="evt-seconds">
+                        <div class="countdown-num" id="evt-s">00</div>
+                        <div class="countdown-lbl">Seconds</div>
+                    </div>
+                </div>
+                <div class="countdown-date-tag">EVENT_DATE_DISPLAY &nbsp;&bull;&nbsp; YOUR_COLLEGE_NAME</div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2 class="section-title">The Legend Awakens</h2>
+            <p class="about-text">
+                After two long years of slumber, the dragon awakens once more. YOUR_SYMPOSIUM_NAME returns to the hallowed halls of YOUR_COLLEGE_NAME, bringing with it a fierce battle of intellect and innovation. Prepare to forge alliances, test your mettle, and witness technology come alive in an epic saga like never before. The realm calls—are you ready to claim the throne?
+            </p>
+        </section>
+
+        <section id="events" class="events-section">
+            <h2 class="section-title">The Battles to Come on September</h2>
+            <div class="events-grid" id="events-grid">
+                <!-- Cards injected via JS -->
+            </div>
+        </section>
+
+        <section id="agenda" class="agenda-section">
+            <h2 class="section-title">Agenda</h2>
+            <div class="agenda-container" id="agenda-container">
+                <!-- Inauguration — Ceremony (Green) -->
+                <div class="agenda-card stroke-green">
+                    <div class="agenda-title"><i class="fas fa-ribbon"></i> Inauguration</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> Seminar Hall</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 09:30 AM - 10:30 AM &nbsp;<span class="agenda-duration">1 Hour</span></div>
+                    </div>
+                </div>
+                <!-- Tier 1 Events (Yellow) -->
+                <div class="agenda-card stroke-yellow">
+                    <div class="agenda-title"><i class="fas fa-file-alt"></i> Paper Presentation</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> MB203</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 10:30 AM - 01:00 PM &nbsp;<span class="agenda-duration">2.5 Hours</span></div>
+                    </div>
+                </div>
+                <div class="agenda-card stroke-yellow">
+                    <div class="agenda-title"><i class="fas fa-comments-dollar"></i> Shark Tank</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> MB202</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 10:30 AM - 01:00 PM &nbsp;<span class="agenda-duration">2.5 Hours</span></div>
+                    </div>
+                </div>
+                <!-- Tier 2 Events (Orange) -->
+                <div class="agenda-card stroke-orange">
+                    <div class="agenda-title"><i class="fas fa-brain"></i> Tech Quiz</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> AB004</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 12:00 PM - 01:00 PM &nbsp;<span class="agenda-duration">1 Hour</span></div>
+                    </div>
+                </div>
+                <div class="agenda-card stroke-orange">
+                    <div class="agenda-title"><i class="fas fa-bug"></i> Debug Relay</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> AB004</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 10:45 AM - 11:45 AM &nbsp;<span class="agenda-duration">1 Hour</span></div>
+                    </div>
+                </div>
+                <!-- Lunch — Ceremony (Green) -->
+                <div class="agenda-card stroke-green">
+                    <div class="agenda-title"><i class="fas fa-utensils"></i> Universal Lunch</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> Common Venue</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 01:00 PM - 01:45 PM &nbsp;<span class="agenda-duration">45 Minutes</span></div>
+                    </div>
+                </div>
+                <!-- Tier 2 Events continued (Orange) -->
+                <div class="agenda-card stroke-orange">
+                    <div class="agenda-title"><i class="fas fa-flag-checkered"></i> CTF</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> AB004</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 01:45 PM - 03:45 PM &nbsp;<span class="agenda-duration">2 Hours</span></div>
+                    </div>
+                </div>
+                <div class="agenda-card stroke-orange">
+                    <div class="agenda-title"><i class="fas fa-paint-brush"></i> UI Design</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> AB005</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 02:00 PM - 03:30 PM &nbsp;<span class="agenda-duration">1.5 Hours</span></div>
+                    </div>
+                </div>
+                <!-- Tier 3 Events (Blue) -->
+                <div class="agenda-card stroke-blue">
+                    <div class="agenda-title"><i class="fas fa-gamepad"></i> Down Side UP</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> MB206</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 02:45 PM - 03:45 PM &nbsp;<span class="agenda-duration">1 Hour</span></div>
+                    </div>
+                </div>
+                <div class="agenda-card stroke-blue">
+                    <div class="agenda-title"><i class="fas fa-robot"></i> AI Prompt Battle</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> AB005</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 12:00 PM - 01:00 PM &nbsp;<span class="agenda-duration">1 Hour</span></div>
+                    </div>
+                </div>
+                <div class="agenda-card stroke-blue">
+                    <div class="agenda-title"><i class="fas fa-pencil-alt"></i> TechDumb Pictionary</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> MB206</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 02:45 PM - 03:45 PM &nbsp;<span class="agenda-duration">1 Hour</span></div>
+                    </div>
+                </div>
+                <div class="agenda-card stroke-blue">
+                    <div class="agenda-title"><i class="fas fa-theater-masks"></i> Binary Charades</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> MB206</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 10:45 AM - 11:45 AM &nbsp;<span class="agenda-duration">1 Hour</span></div>
+                    </div>
+                </div>
+                <!-- Closing Ceremony — Ceremony (Green) -->
+                <div class="agenda-card stroke-green">
+                    <div class="agenda-title"><i class="fas fa-award"></i> Closing Ceremony</div>
+                    <div class="agenda-details">
+                        <div class="agenda-detail-item"><i class="fas fa-map-marker-alt"></i> Seminar Hall</div>
+                        <div class="agenda-detail-item"><i class="fas fa-clock"></i> 03:45 PM - 04:30 PM &nbsp;<span class="agenda-duration">45 Minutes</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Flash burst element for card-to-popup animation -->
+    <div id="overlay-flash"></div>
+
+    <!-- Full-screen Event Popup -->
+    <div id="event-overlay" class="event-overlay hidden">
+        <!-- Cover photo background (low brightness) -->
+        <div id="overlay-bg-photo" class="overlay-bg-photo"></div>
+        <!-- Dark gradient scrim over the photo -->
+        <div class="overlay-scrim"></div>
+
+        <div class="overlay-content">
+            <button id="close-overlay" class="close-btn"><i class="fas fa-times"></i></button>
+
+            <!-- Header: title + theme badge -->
+            <div class="popup-header">
+                <span class="popup-theme-badge" id="detail-theme"></span>
+                <h2 class="popup-title" id="detail-title">Event Title</h2>
+            </div>
+
+            <!-- Body: all details -->
+            <div class="popup-body">
+
+                <!-- Description -->
+                <div class="popup-section popup-desc-section">
+                    <p id="detail-desc" class="popup-desc"></p>
+                </div>
+
+                <!-- Info Pills Row -->
+                <div class="popup-info-pills">
+                    <div class="info-pill">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <span class="pill-label">Team Size</span>
+                            <span class="pill-value" id="detail-team-size">—</span>
+                        </div>
+                    </div>
+                    <div class="info-pill">
+                        <i class="fas fa-trophy"></i>
+                        <div>
+                            <span class="pill-label">Prize</span>
+                            <span class="pill-value" id="detail-prizes">—</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rules -->
+                <div class="popup-section">
+                    <h4 class="popup-section-title">
+                        <span class="popup-section-icon"><i class="fas fa-scroll"></i></span>
+                        Rules of Engagement
+                    </h4>
+                    <ul id="detail-rules" class="popup-rules-list"></ul>
+                </div>
+
+                <!-- Coordinator -->
+                <div class="popup-section popup-coord-section">
+                    <h4 class="popup-section-title">
+                        <span class="popup-section-icon"><i class="fas fa-raven"></i></span>
+                        Send a Raven
+                    </h4>
+                    <div class="popup-coord-card">
+                        <div class="popup-coord-avatar"><i class="fas fa-user-shield"></i></div>
+                        <div class="popup-coord-info">
+                            <span class="popup-coord-name" id="detail-coord-name">—</span>
+                            <span class="popup-coord-role">Event Coordinator</span>
+                            <a id="detail-coord-phone" href="tel:" class="popup-coord-phone">
+                                <i class="fas fa-phone-alt"></i>
+                                <span id="detail-coord-phone-text">—</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /popup-body -->
+
+            <!-- CTA -->
+            <a href="#register" id="register-btn" class="popup-register-btn"
+               onclick="document.getElementById('event-overlay').classList.add('hidden'); document.body.style.overflow='auto';">
+                <i class="fas fa-fire"></i> Register Now &mdash; ₹200 / Head
+            </a>
+        </div><!-- /overlay-content -->
+    </div>
+    <section id="Date" class="date-section">
+            <img src="assets/Sep09.png" alt="Date of Cebroid 2k26" class="date-img">
+    </section>
+
+    <!-- ══ REGISTRATION CLOSING COUNTDOWN ══ -->
+    <div class="reg-countdown-section" id="reg-countdown-section">
+        <div class="reg-countdown-inner">
+            <div class="reg-countdown-header">
+                <i class="fas fa-hourglass-half reg-hourglass-icon"></i>
+                <div class="reg-countdown-title-block">
+                    <h3 class="reg-countdown-title">Registration Closes In</h3>
+                    <p class="reg-countdown-subtitle">Secure your seat before the gates shut on <strong>REGISTRATION_CLOSE_DATE</strong></p>
+                </div>
+                <i class="fas fa-hourglass-half reg-hourglass-icon flip"></i>
+            </div>
+            <div class="countdown-strip reg-strip" id="reg-countdown">
+                <div class="countdown-unit reg-unit" id="reg-days">
+                    <div class="countdown-num reg-num" id="reg-d">00</div>
+                    <div class="countdown-lbl">Days</div>
+                </div>
+                <div class="countdown-sep reg-sep">:</div>
+                <div class="countdown-unit reg-unit" id="reg-hours">
+                    <div class="countdown-num reg-num" id="reg-h">00</div>
+                    <div class="countdown-lbl">Hours</div>
+                </div>
+                <div class="countdown-sep reg-sep">:</div>
+                <div class="countdown-unit reg-unit" id="reg-minutes">
+                    <div class="countdown-num reg-num" id="reg-m">00</div>
+                    <div class="countdown-lbl">Minutes</div>
+                </div>
+                <div class="countdown-sep reg-sep">:</div>
+                <div class="countdown-unit reg-unit" id="reg-seconds">
+                    <div class="countdown-num reg-num" id="reg-s">00</div>
+                    <div class="countdown-lbl">Seconds</div>
+                </div>
+            </div>
+            <a href="#register" class="reg-countdown-cta">
+                <i class="fas fa-fire"></i> Register Now &mdash; Don't Miss Out!
+            </a>
+        </div>
+    </div>
+
+    <!-- Individual Registration Section -->
+    <section id="register" class="register-section">
+        <div class="register-banner" id="register-banner">
+            <div class="register-banner-content">
+                <div class="register-banner-icon"><i class="fas fa-scroll"></i></div>
+                <div class="register-banner-text">
+                    <h2>Pledge Your Allegiance</h2>
+                    <p>One Pass • All Events • ₹200 Per Head</p>
+                </div>
+                <button class="register-banner-btn" id="open-reg-form">Register Now <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="register-banner-text">
+                    <h3>Individual Registration</h3>
+                    <p>Participants must register individually and can team up on the venue.</p>
+                    <p>Participants are reqested to view the event agenda and select their preferred events accordingly.</p>
+                </div>
+        </div>
+
+        <div class="register-form-container hidden" id="register-form-container">
+            <div class="register-form-inner">
+                <div class="register-form-header">
+                    <div>
+                        <h2>Join the Realm</h2>
+                        <p class="reg-fee-badge"><i class="fas fa-coins"></i> Registration Fee: <strong>₹200 per head</strong> — Grants access to all chosen events</p>
+                    </div>
+                    <button class="close-reg-form" id="close-reg-form"><i class="fas fa-times"></i></button>
+                </div>
+
+                <form id="individual-reg-form" class="got-form" novalidate>
+
+                    <!-- Step Indicator -->
+                    <div class="step-indicator">
+                        <div class="step-item active" id="step-ind-1">
+                            <div class="step-num">1</div>
+                            <span>Your Details</span>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step-item" id="step-ind-2">
+                            <div class="step-num">2</div>
+                            <span>Payment</span>
+                        </div>
+                    </div>
+
+                    <!-- ===== STEP 1: Personal Details ===== -->
+                    <div id="reg-step-1" class="reg-step">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reg-name"><i class="fas fa-user"></i> Your Name</label>
+                                <input type="text" id="reg-name" name="name" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-phone"><i class="fas fa-phone"></i> Contact Number</label>
+                                <input type="tel" id="reg-phone" name="phone" placeholder="10-digit mobile number">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reg-email"><i class="fas fa-envelope"></i> Email Address</label>
+                                <input type="email" id="reg-email" name="email" placeholder="yourname@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-college"><i class="fas fa-university"></i> College / Institution</label>
+                                <input type="text" id="reg-college" name="college" placeholder="Your college name">
+                            </div>
+                        </div>
+
+                        <div class="form-group events-select-group">
+                            <label><i class="fas fa-sword"></i> Select Events to Attend <span class="label-hint">(Choose one or more)</span></label>
+                            <div class="events-checkbox-grid" id="events-checkbox-grid">
+                                <!-- Injected via JS -->
+                            </div>
+                        </div>
+
+                        <!-- Food Preference Dropdown -->
+                        <div class="form-group food-preference-group">
+                            <label for="reg-food"><i class="fas fa-utensils"></i> Food Preference <span class="required-star">*</span></label>
+                            <select id="reg-food" name="food" class="food-select">
+                                <option value="" disabled selected>-- Select food preference --</option>
+                                <option value="Veg">🥦 Veg</option>
+                                <option value="Non-Veg">🍗 Non-Veg</option>
+                            </select>
+                        </div>
+
+                        <!-- Event Notice -->
+                        <div class="event-notice">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Event is on <strong>Friday</strong>, plan accordingly, this is final.</span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="text-btn" id="reset-reg-form">Clear</button>
+                            <button class="register-banner-btn" class="cta-button submit-btn" id="proceed-to-payment">
+                                Proceed to Payment <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div id="step1-error" class="step-error hidden"></div>
+                    </div>
+
+                    <!-- ===== STEP 2: Payment ===== -->
+                    <div id="reg-step-2" class="reg-step hidden">
+
+                        <!-- Registration Summary -->
+                        <div class="payment-summary-bar" id="payment-summary-bar">
+                            <i class="fas fa-user-check"></i>
+                            <div id="payment-summary-text"></div>
+                        </div>
+
+                        <!-- QR + Instructions -->
+                        <div class="payment-body">
+                            <div class="qr-column">
+                                <div class="qr-wrapper">
+                                    <!-- TODO: Replace 'assets/your_upi_qr_code.png' with your actual UPI QR code image -->
+                                    <img src="assets/your_upi_qr_code.png" alt="UPI Payment QR Code" class="qr-image">
+                                </div>
+                                <p class="qr-caption"><i class="fas fa-mobile-alt"></i> Scan with any UPI app</p>
+                                <div class="qr-caption">₹200 <span>per head</span></div>
+                            </div>
+                            <div class="payment-instructions-column">
+                                <h4><i class="fas fa-list-ol"></i> How to Complete Payment</h4>
+                                <ol class="pay-steps">
+                                    <li>Open PhonePe, GPay, Paytm or any UPI app</li>
+                                    <li>Scan the QR code on the left</li>
+                                    <li>Please make sure you mention note as "CEBROID"</li>
+                                    <li>Pay exactly <strong>₹200</strong></li>
+                                    <li>Take a screenshot of the success screen</li>
+                                    <li>Note the <strong>Transaction ID</strong> shown</li>
+                                    <li>Enter the details below and submit</li>
+                                </ol>
+                                <div class="pay-note">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Your registration will be <strong>manually verified</strong> by our team. A confirmation mail will be sent only after verification.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Transaction ID -->
+                        <div class="form-group" style="margin-top: 30px;">
+                            <label for="reg-txn-id"><i class="fas fa-hashtag"></i> Transaction ID <span class="required-star">*</span></label>
+                            <input type="text" id="reg-txn-id" name="transactionId" placeholder="e.g. T2506071234567890">
+                        </div>
+
+                        <!-- Screenshot Upload -->
+                        <div class="form-group">
+                            <label><i class="fas fa-image"></i> Payment Screenshot <span class="required-star">*</span></label>
+                            <div class="file-upload-area" id="file-upload-area">
+                                <input type="file" id="reg-screenshot" name="screenshot" accept="image/*">
+                                <div class="file-upload-placeholder" id="file-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Click to upload your payment screenshot</p>
+                                    <small>PNG, JPG, WEBP — Max 5 MB</small>
+                                </div>
+                                <div class="file-preview hidden" id="file-preview">
+                                    <img id="preview-img" alt="Payment screenshot preview">
+                                    <div class="file-preview-info">
+                                        <p id="preview-name"></p>
+                                        <p id="preview-size" class="preview-size-text"></p>
+                                        <button type="button" class="remove-file-btn" id="remove-file"><i class="fas fa-trash"></i> Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="text-btn" id="back-to-step1"><i class="fas fa-arrow-left"></i> Back</button>
+                            <button class="register-banner-btn" class="cta-button submit-btn" id="reg-submit-btn">
+                                Submit Registration <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div id="step2-error" class="step-error hidden"></div>
+                    </div>
+
+                    <div id="reg-form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="coordinators-container">
+            <!-- TODO: Replace coordinator details below with your actual coordinator information -->
+            <!-- Coordinator 1 -->
+            <div class="coordinator-card">
+                <div class="coord-info">
+                    <span class="coord-name">COORDINATOR_1_NAME</span>
+                    <span class="coord-role">Chief Coordinator</span>
+                </div>
+                <div class="coord-icons">
+                    <a href="mailto:coordinator1@yourdomain.com" class="coord-icon-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+910000000001" class="coord-icon-btn" title="Call"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_1" class="coord-icon-btn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <!-- Coordinator 2 -->
+            <div class="coordinator-card">
+                <div class="coord-info">
+                    <span class="coord-name">COORDINATOR_2_NAME</span>
+                    <span class="coord-role">Event Head</span>
+                </div>
+                <div class="coord-icons">
+                    <a href="mailto:coordinator2@yourdomain.com" class="coord-icon-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+910000000002" class="coord-icon-btn" title="Call"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_2" class="coord-icon-btn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <!-- Coordinator 3 -->
+            <div class="coordinator-card">
+                <div class="coord-info">
+                    <span class="coord-name">COORDINATOR_3_NAME</span>
+                    <span class="coord-role">Committee Head</span>
+                </div>
+                <div class="coord-icons">
+                    <a href="mailto:coordinator3@yourdomain.com" class="coord-icon-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+910000000003" class="coord-icon-btn" title="Call"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_3" class="coord-icon-btn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; YEAR YOUR_SYMPOSIUM_NAME Technical Symposium.</p>
+        <p>Designed &amp; Developed By YOUR_NAME.</p>
+        <p>Department of YOUR_DEPARTMENT - YOUR_CLUB_NAME.</p>
+        <p>YOUR_COLLEGE_NAME.</p>
+    </footer>
+
+    <!-- ══════════════════════════════════════════════════
+         REGISTRATION SUCCESS FULL-SCREEN OVERLAY
+         ══════════════════════════════════════════════════ -->
+    <div id="success-overlay" class="success-overlay hidden" aria-modal="true" role="dialog">
+
+        <!-- Ambient particles canvas -->
+        <canvas id="success-particles" class="success-particles-canvas"></canvas>
+
+        <!-- Glow rings -->
+        <div class="success-ring success-ring-1"></div>
+        <div class="success-ring success-ring-2"></div>
+        <div class="success-ring success-ring-3"></div>
+
+        <!-- Card -->
+        <div class="success-card" id="success-card">
+
+            <!-- Dragon crest icon -->
+            <div class="success-crest">
+                <div class="success-check-wrap">
+                    <svg class="success-checkmark" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="success-check-circle" cx="26" cy="26" r="24" stroke="url(#grad1)" stroke-width="2.5" fill="none"/>
+                        <path  class="success-check-tick"   d="M14 26 L22 34 L38 18" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <defs>
+                            <linearGradient id="grad1" x1="0" y1="0" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#990000"/>
+                                <stop offset="100%" stop-color="#e65c00"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Badge -->
+            <span class="success-badge">Registration Received</span>
+
+            <!-- Heading -->
+            <h2 class="success-title">Your Pledge Has Been Sealed</h2>
+
+            <!-- Body message -->
+            <p class="success-msg">
+                We have received your registration.<br>
+                Our team will <strong>verify your payment</strong> and send a
+                <strong>confirmation mail</strong> to your inbox after verification.
+            </p>
+
+            <!-- Registrant email echo -->
+            <div class="success-email-chip" id="success-email-chip">
+                <i class="fas fa-envelope"></i>
+                <span id="success-email-text">—</span>
+            </div>
+
+            <!-- Divider -->
+            <div class="success-divider">
+                <span class="success-divider-icon"><i class="fas fa-dragon"></i></span>
+            </div>
+
+            <!-- CTA -->
+            <button class="success-explore-btn" id="success-explore-btn">
+                <i class="fas fa-compass"></i>
+                Continue Exploring
+            </button>
+
+            <!-- Fine print -->
+            <p class="success-fine">Check your spam folder if the mail doesn't arrive within 24 hours.</p>
+        </div>
+    </div>
+
+    <!-- Scroll Down Hint Toast -->
+    <div id="scroll-down-hint">
+        <i class="fas fa-chevron-up"></i>
+        <span>Scroll up</span>
+    </div>
+
+    <!-- GSAP & Flip Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
