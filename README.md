@@ -2,6 +2,9 @@
 
 A **fully functional, open-source event registration website** built with vanilla HTML, CSS, and JavaScript. Features a Game of Thrones–inspired dark aesthetic, animated countdowns, multi-step registration form, UPI payment with screenshot upload, and an automated Google Apps Script backend that generates **Entry Pass PDFs** and **OD Letters** and emails them to participants after admin verification.
 
+Check my "KingsGuard- Reception team verification template" to get the verification webpage template to verify the QR codes.
+
+
 ---
 
 ## ✨ Features
